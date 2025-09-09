@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: gbtnetwork
+    env: docker
+    plan: standard
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    ports:
+      - port: 9636
+        protocol: tcp
+      - port: 8000
+        protocol: tcp
+    envVars:
+      - key: COINBASE
+        value: 0xF7F965b65E735Fb1C22266BdcE7A23CF5026A1E
